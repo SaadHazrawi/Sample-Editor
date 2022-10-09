@@ -1,0 +1,315 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900;1000&family=Dancing+Script:wght@700&family=Kufam:wght@700&family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400&family=Poppins:wght@200;300;400;700&family=Tajawal:wght@400;500;700&family=Work+Sans:wght@500;600;700;800&display=swap');
+
+:root {
+    --main-color: #FF731D;
+    --two-color: #FFF7E9;
+    --three-color: #5F9DF7;
+    --four--color: #1746A2;
+}
+
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Tajawal', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+.container {
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+header {
+    width: 100%;
+    box-shadow: 0px 2px 9px 0px #00000091;
+    height: 16vh;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    flex-basis: 30%;
+}
+
+header .logo img {
+    width: 200px;
+
+}
+
+header nav {
+    flex-basis: 65%;
+    padding-right: 50px;
+}
+
+header ul {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+@media(max-width:880px) {
+    .course .one {
+        padding-left:  50px;
+    }
+}
+@media(max-width:880px) {
+    nav {
+        display: none;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    .logo {
+        margin: auto;
+    }
+    .course .one {
+        padding-left:   0px;
+    }
+    
+}
+
+header ul li a {
+    padding: 10px;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: 400;
+    color: black;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+header ul li:hover a {
+    box-shadow: 0px 0px 5px 0px var(--three-color);
+    color: var(--four--color);
+}
+
+/* landing*/
+.landing {
+    height: calc(100vh - 16vh);
+    position: relative;
+
+
+}
+
+.landing p {
+    color: #8eabe5;
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    z-index: 7;
+    transform: translate(50%, 50%);
+    font-size: 18px;
+    font-family: 'Kufam', sans-serif;
+    letter-spacing: 2px;
+    word-spacing: 2px;
+    width: 70%;
+    padding: 10px;
+}
+
+.landing::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0%;
+    left: 0;
+    bottom: 0;
+    background-image: url("image/laptop.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 1;
+}
+
+.landing::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0%;
+    left: 0;
+    bottom: 0;
+
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.coder {
+    height: 50vh;
+    display: grid;
+    gap: 10px;
+    grid-template-areas:
+        "ma ma ma ma ma as"
+        "ma ma ma ma ma as"
+        "ma ma ma ma ma as"
+        "ma ma ma ma ma as"
+        "ma ma ma ma ma as"
+        "ma ma ma ma ma as"
+    ;
+    /* background: linear-gradient(180deg ,#ff731da6 0%,#668cc3
+     20%,#1746a2b0 100%); */
+}
+
+.coder aside {
+    grid-area: as;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.coder aside .active {
+    padding: 10px;
+    margin-top: 2px;
+    font-size: 14px;
+    font-weight: 600;
+    background-color: var(--main-color);
+    outline: none;
+    border: 1px solid var(--four--color);
+    color: white;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    padding-right: 20px;
+}
+
+.coder aside button:not(:first-child) {
+    padding: 10px;
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 13px;
+    font-weight: 600;
+    border: 1px solid var(--four--color);
+    transition: 0.5s ease;
+    -webkit-transition: 0.5s ease;
+    -moz-transition: 0.5s ease;
+    -ms-transition: 0.5s ease;
+    -o-transition: 0.5s ease;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+
+}
+
+.coder aside button:hover {
+    background-color: var(--main-color);
+    color: white;
+    padding-right: 20px;
+}
+
+.coder main {
+    grid-area: ma;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.coder main p {
+
+    margin-top: 51px;
+    font-size: 15px;
+    font-weight: 600;
+
+}
+
+/* Course */
+.course {
+    background-color: #eee;
+}
+
+.course h2 {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 40px;
+    /* padding-right: 20px;
+      margin: 10px auto 40px; */
+}
+
+
+
+.course .cont-grid {
+
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    align-items: center;
+    flex-wrap: wrap;
+
+
+}
+
+.course .box {
+    align-self: center;
+
+    margin: 0 auto;
+    flex-basis: 30%;
+
+}
+
+.course .one {
+    /* padding-left: 50px; */
+}
+
+.course .box img {
+
+    width: 300px;
+    margin-bottom: 20px;
+    border-radius: 50%;
+}
+
+.course .box p {
+    width: 300px;
+    text-align: center;
+    font-size: 18px;
+    color: black;
+}
+
+footer {
+    background-color: var(--three-color);
+    height: 10vh;
+    text-align: center;
+    margin-top: 20px;
+}
+
+footer p {
+    padding-top: 10px;
+    color: var(--two-color);
+    font-size: 20px;
+    font-family: 'Kufam', sans-serif;
+}
